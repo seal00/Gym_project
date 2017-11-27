@@ -14,11 +14,11 @@
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
-    <script>
+   <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
-    </script>
+    </script> 
 </head>
 <body>
     <div id="app">

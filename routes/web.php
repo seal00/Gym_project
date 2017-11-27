@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-//Route::get('/', 'PagesController@index');
-//Route::get('/home', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
-Route::get('/trial', 'PagesController@trial');
+//Route::get('/', 'HomeController@index');
+Route::get('/', 'PagesController@index');
+Route::get('/home', 'HomeController@index');
+//Route::get('/about', 'PagesController@about');
+//Route::get('/services', 'PagesController@services');
+//Route::get('/trial', 'PagesController@trial');
 Auth::routes();
 
 /* Route::get('/users/{id}', function($id){
