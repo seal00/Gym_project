@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Pessoa;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -48,10 +49,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'username' => 'required|unique:users|max:20',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
             'contacto' => 'required|regex:/^[0-9]{9}$/',
+            'name' => 'required|max:255',
             'nascimento' => 'required|regex:/^[0-3]?[0-9].[0-3]?[0-9].(?:[0-9]{2})?[0-9]{2}$/',
             'nif' => 'required|max:255',
             'sexo' => 'required|max:255',
@@ -68,16 +70,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        $user = User::create([
+            'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+        ]);
+
+        $user->pessoa = Pessoa::create([
+            'name' => $data['name'],
             'contacto' => $data['contacto'],
             'nascimento' => $data['nascimento'],
             'nif' => $data['nif'],
             'sexo' => $data['sexo'],
             'peso' => $data['peso'],
             'altura' => $data['altura'],
+            'user_id' => $user->id,
         ]);
+
+        return $user;
     }
 }

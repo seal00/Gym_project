@@ -14,11 +14,11 @@
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
-   <script>
+    <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
-    </script> 
+    </script>
 </head>
 <body>
     <div id="app">
@@ -50,7 +50,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Logina</a></li>
+                            <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">

@@ -11,14 +11,19 @@
 |
 */
 
+Auth::routes();
 //Route::get('/', 'HomeController@index');
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'HomeController@index');
 //Route::get('/about', 'PagesController@about');
 //Route::get('/services', 'PagesController@services');
-//Route::get('/trial', 'PagesController@trial');
-Auth::routes();
+//Route::get('/register', 'PessoaController@index');
+//Route::post('/register', 'PessoaController@add');
+
 
 /* Route::get('/users/{id}', function($id){
     return $id.', You are logged in!';
 }); */
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index');
