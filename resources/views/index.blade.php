@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>ACR GYM</title>
-        <link rel="stylesheet" type="text/css" href="/css/custom.css">
-        <script src="/js/custom.css"></script>
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <script src="/js/custom.css"></script>
 </head>
 
 <body>      
@@ -73,4 +73,3 @@
 </body>
 
 </html>
-    
