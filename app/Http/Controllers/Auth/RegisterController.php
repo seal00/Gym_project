@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Pessoa;
+use App\Cliente;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -85,6 +86,10 @@ class RegisterController extends Controller
             'peso' => $data['peso'],
             'altura' => $data['altura'],
             'user_id' => $user->id,
+        ]);
+
+        $user->pessoa->cliente= Cliente::create([
+            'pessoa_id' => $user->pessoa->id,
         ]);
 
         return $user;
