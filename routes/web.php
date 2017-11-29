@@ -19,9 +19,13 @@ Route::get('/home', 'HomeController@index');
 //Route::get('/services', 'PagesController@services');
 //Route::get('/register', 'PessoaController@index');
 //Route::post('/register', 'PessoaController@add');
-Route::get('/admin/', ['middleware' => 'admin', function () {  
+/*Route::get('/admin/', ['middleware' => 'admin', function () {  
     return view('admin.admin');
-}]);
+}]);*/
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin/', 'AdminController@admin');
+    //another routes...
+});
 /* Route::get('/users/{id}', function($id){
     return $id.', You are logged in!';
 }); */

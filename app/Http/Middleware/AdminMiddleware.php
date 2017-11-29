@@ -16,7 +16,7 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check()){
+        if(Auth::check()){ //login user
             if(Auth::user()->isAdmin == '1') // is an admin
             {
                 return $next($request); // pass the admin
