@@ -4,7 +4,8 @@
 <head>
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
-    <script src="/js/custom.css"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
 </head>
 
 <body>      
