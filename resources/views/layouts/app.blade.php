@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}" />
     <script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 </head>
 
 <body>      
@@ -25,10 +30,10 @@
             {{ csrf_field() }}
                     <label><b>Username:</b></label>
                     
-                    <input type="text" placeholder="Username" class="form-control" name="email" required>
-                    @if ($errors->has('email'))
+                    <input type="text" placeholder="Username" id="username" type="username" class="form-control" name="username" required>
+                    @if ($errors->has('username'))
                                     <span>
-                                        <strong>{{ $errors->first('email') }}</strong><br>
+                                        <strong>{{ $errors->first('username') }}</strong><br>
                                     </span>
                     @endif
 
