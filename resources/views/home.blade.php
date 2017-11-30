@@ -8,7 +8,13 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    @if (Auth::user()->isAdmin())
+                        You are logged in as admin!
+                    
+                    @else
+                        You are logged in!
+                
+                    @endif
                 </div>
             </div>
         </div>

@@ -32,4 +32,8 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Pessoa');
     }
+
+    public function isAdmin(){
+        return (\Auth::check() && $this->isAdmin == 1);
+    }
 }
