@@ -28,7 +28,7 @@
                     <input type="text" placeholder="Username" class="form-control" name="email" required>
                     @if ($errors->has('email'))
                                     <span>
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('email') }}</strong><br>
                                     </span>
                     @endif
 
@@ -36,7 +36,7 @@
                     <input type="password" placeholder="Password" class="form-control" name="password" required>
                     @if ($errors->has('password'))
                                     <span>
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('password') }}</strong><br>
                                     </span>
                     @endif
 

@@ -36,4 +36,8 @@ class User extends Authenticatable
     public function isAdmin(){
         return (\Auth::check() && $this->isAdmin == 1);
     }
+
+    public function isInst(){
+        return (\Auth::check() && $this->isInst == 1);
+    }
 }

@@ -9,7 +9,10 @@
 
                 <div class="panel-body">
                     @if (Auth::user()->isAdmin())
-                        You are logged in as admin!
+                        You are logged in as ADMIN!
+
+                    @elseif (Auth::user()->isInst())
+                        You are logged in as instructor!
                     
                     @else
                         You are logged in!
