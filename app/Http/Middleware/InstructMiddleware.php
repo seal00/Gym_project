@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Middleware;
-
-use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AdminMiddleware
+use Closure;
+
+class InstructMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,11 +17,11 @@ class AdminMiddleware
     public function handle($request, Closure $next)
     {
         if(Auth::check()){ //login user
-            if(Auth::user()->isAdmin == '1') // is an admin
+            if(Auth::user()->isInst == '1') // is an instructor
             {
-                return $next($request); // pass the admin
+                return $next($request); // pass the instructor
             }else{
-                return redirect('/home')->withError('Permission Denied'); // not admin.
+                return redirect('/home')->withError('Permission Denied'); // not instructor
             }
         }else{
             return redirect('/login')->withError('Unauthorized.', 401);//not loggin in

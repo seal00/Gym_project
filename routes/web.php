@@ -26,6 +26,12 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/', 'AdminController@admin');
     //another routes...
 });
+
+Route::group(['middleware' => 'instruct'], function () {
+    Route::get('/aulas/', 'InstrutorController@index');
+    //another routes...
+});
+
 /* Route::get('/users/{id}', function($id){
     return $id.', You are logged in!';
 }); */
