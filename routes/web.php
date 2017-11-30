@@ -32,6 +32,13 @@ Route::group(['middleware' => 'instruct'], function () {
     //another routes...
 });
 
+/*Route::get('/', function () {
+    if(Auth::check()) {
+        return redirect('home');
+    }
+    return view('index');
+})->name('home');*/
+
 /* Route::get('/users/{id}', function($id){
     return $id.', You are logged in!';
 }); */
