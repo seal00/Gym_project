@@ -1,5 +1,5 @@
 /* div do menu */
-#menu 
+#menu
 {
 }
 /*menu */
@@ -11,11 +11,11 @@ ul {
     overflow: hidden;
 }
 /*menu */
-li {
+li:not(#forgot):not(#create_account) {
     float: right;
 }
 /*menu */
-li a {
+li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account) {
     padding: 20px 20px;
     color: white;
     text-align: center;
@@ -23,9 +23,13 @@ li a {
     display: inline-block;
 }
 /*menu */
-li a:hover {
-    background-color: black;
+li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account):hover {
+    background-color: rgb(233, 19, 19);
 }
+
+
+
+
 /*LOGIN CSS*/
 input[type=text], input[type=password] {
     display: inline-block;
@@ -36,28 +40,6 @@ input[type=text], input[type=password] {
     border-width: 1px;
     border-color: rgb(41, 40, 40);
     box-sizing: border-box;
-}
-
-.container {
-    padding: 20px;
-    float: right;
-    width: 30%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(41, 40, 40);
-}
-
-#lbutton {
-    background-color: rgb(41, 40, 40);
-    color: white;
-    padding: 14px 20px;
-    margin: 10px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-#lbutton:hover {
-    background-color: black;
 }
 /* botao que volta para o topo*/
 #btopo {
@@ -90,4 +72,61 @@ body{
     border-width: 1px;
     height: 500px;
     padding: 10px;
+}
+
+#lbutton {
+    background-color: rgb(41, 40, 40);
+    color: white;
+    padding: 14px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#lbutton:hover {
+    background-color: black;
+}
+
+
+
+#login {
+    list-style: none;
+    height: 40px;
+    float:right;
+    right: 0;
+}
+
+
+
+
+#login-form  {
+    padding: 20px;
+    float: right;
+    width: 30%;
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    margin-top: 9px;
+    display: none;
+    right: 0;
+    clear: both;
+    background-color: rgb(255, 248, 248);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#login-form .text {
+    width: 100%;
+    float: right;
+    margin-bottom: 2%;
+}
+
+#login-form .submit {
+    float: right;
+}
+
+#create{
+    float: right;
 }
