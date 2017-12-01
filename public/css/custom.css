@@ -1,3 +1,12 @@
+/*corpo do website */
+body{
+   /* background-color: white;*/
+    margin: 0 auto;
+    font-family:"Arial", Serif;
+    background-color:#f4f4f4;
+    overflow-x:hidden;
+}
+
 /* div do menu */
 #menu
 {
@@ -43,7 +52,7 @@ input[type=text], input[type=password] {
 }
 /* botao que volta para o topo*/
 #btopo {
-    position: fixed; 
+    position: fixed;
     border: none;
     outline: none;
     bottom: 10px;
@@ -59,11 +68,7 @@ input[type=text], input[type=password] {
 #btopo:hover {
     background-color: black;
 }
-/*corpo do website */ 
-body{
-    background-color: white;
-    margin: 0 auto;
-}
+
 /*divisorias / categorias do website*/
 #home,#serv,#free,#about{
     margin-top: 10px;
