@@ -5,23 +5,60 @@ body{
     font-family:"Arial", Serif;
     background-color:#f4f4f4;
     overflow-x:hidden;
+   
+}
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
 }
 
-/* div do menu */
-#menu
-{
+/* Header **/
+header{
+  background:#35424a;
+  color:#e8491d;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#e8491d 3px solid;
 }
-/*menu */
-ul {
-    background-color: rgb(41, 40, 40);
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
 }
+
+header li{
+  float: left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:white;
+  font-weight:bold;
+}
+
+
 /*menu */
 li:not(#forgot):not(#create_account) {
     float: right;
+    color:#e8491d;
 }
 /*menu */
 li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account) {
@@ -33,11 +70,8 @@ li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account) {
 }
 /*menu */
 li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account):hover {
-    background-color: rgb(233, 19, 19);
+    background-color: #e8491d;
 }
-
-
-
 
 /*LOGIN CSS*/
 input[type=text], input[type=password] {
@@ -47,7 +81,7 @@ input[type=text], input[type=password] {
     padding: 10px 20px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(41, 40, 40);
+    border-color: #35424a;
     box-sizing: border-box;
 }
 /* botao que volta para o topo*/
@@ -57,8 +91,7 @@ input[type=text], input[type=password] {
     outline: none;
     bottom: 10px;
     right: 10px; 
-    /*z-index: 99;*/
-    background-color: rgb(41, 40, 40);
+    background-color: #35424a;
     color: white; 
     cursor: pointer;
     padding: 10px; 
@@ -66,7 +99,7 @@ input[type=text], input[type=password] {
 }
 /* botao que volta para o topo*/
 #btopo:hover {
-    background-color: black;
+    background-color: #e8491d;
 }
 
 /*divisorias / categorias do website*/
@@ -80,20 +113,19 @@ input[type=text], input[type=password] {
 }
 
 #lbutton {
-    background-color: rgb(41, 40, 40);
+    font-size: 14px;
+    background-color: #35424a;
     color: white;
     padding: 14px 20px;
     margin: 10px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 70%;
 }
 
 #lbutton:hover {
-    background-color: black;
+    background-color: #e8491d;;
 }
-
-
 
 #login {
     list-style: none;
@@ -102,10 +134,8 @@ input[type=text], input[type=password] {
     right: 0;
 }
 
-
-
-
 #login-form  {
+    color:#35424a;
     padding: 20px;
     float: right;
     width: 30%;
@@ -117,11 +147,11 @@ input[type=text], input[type=password] {
     right: 0;
     clear: both;
     background-color:#f4f4f4;
-   /* background-color: rgb(255, 248, 248);*/
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
+
 
 #login-form .text {
     width: 100%;
@@ -132,7 +162,38 @@ input[type=text], input[type=password] {
 #login-form .submit {
     float: right;
 }
+#create_account{
+    float: left;
+    font-size: 14px;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #e8491d;
+}
 
-#create{
-    float: right;
+#create_account:hover {
+    background-color: #35424a;;
+}
+
+#forgot {
+    font-size: 14px;
+    float: left;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0 10px 10px;
+    width: 45%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #35424a;
+}
+
+#forgot:hover {
+    background-color: #e8491d;;
 }
