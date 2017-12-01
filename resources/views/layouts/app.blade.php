@@ -83,8 +83,23 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<script>
+		//Abre menu com click
+		$(document).ready(function(){
+			$('#login-trigger').click(function() {
+				$(this).next('#login-form').slideToggle();
+				$(this).toggleClass('active');
+
+				if ($(this).hasClass('active')){
+				$('#login-form').slideDown( "slow" );
+				}
+				else{
+					$('#login-form').slideUp( "slow" );
+				} 
+			})
+		});
 		
-		$("#login-trigger").hover(function() {
+		//Abre menu ao passar o rato
+		/* $("#login-trigger").hover(function() {
 			$( "#login-form" ).slideDown( "slow" );
 			
 			$('#login-form').hover(function(){
@@ -105,7 +120,7 @@
 		
 		$("#ab").hover(function() {
 			$( "#login-form" ).slideUp( "slow" );
-		});
+		}); */
 		
 	</script>
 
