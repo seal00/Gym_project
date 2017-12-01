@@ -88,6 +88,7 @@
 			$('#login-trigger').click(function() {
 				$(this).next('#login-form').slideToggle();
 				$(this).toggleClass('active');
+				
 
 				if ($(this).hasClass('active')){
 				$('#login-form').slideDown( "slow" );
