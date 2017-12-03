@@ -11,7 +11,7 @@
 
 	<title>{{ config('app.name', 'Laravel') }}</title>
 	
-	<link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}" />
+	<link rel="stylesheet" href="{{ URL::asset('css/customHome.css') }}" />
 	<script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
 	<script>
@@ -20,103 +20,39 @@
         ]); ?>
 	</script>
 </head>
-<button onclick="topFunction()" id="btopo" title="homepagebutton">Top</button>
 <header>
       <div class="container">
         <div id="branding">
           <h1><span class="highlight">Madeira</span> Gym</h1>
         </div>
-        <nav>
+        <nav id="navbar">
           <ul>
-            <li id="login">
-				<!--<a href="{{ url('/login') }}">Login</a>-->
-				<a id="login-trigger" href="#">Login</a>
-			
-				<form id="login-form" role="form" method="POST" action="{{ url('/login') }}">
-					{{ csrf_field() }}
-					<label>
-						<b>Username:</b>
-					</label>
-
-					<input type="text" placeholder="Username" id="username" type="username" class="form-control" name="username" required> @if ($errors->has('username'))
-					<span>
-						<strong>{{ $errors->first('username') }}</strong>
-						<br>
-					</span>
-					@endif
-
-					<label>
-						<b>Password:</b>
-					</label>
-					<input type="password" placeholder="Password" class="form-control" name="password" required> @if ($errors->has('password'))
-					<span>
-						<strong>{{ $errors->first('password') }}</strong>
-						<br>
-					</span>
-					@endif
-
-					<button type="submit" id="lbutton">LOGIN</button>
-
-					<input type="checkbox" name="remember" {{ old( 'remember') ? 'checked' : ''}}> Remember </br>
-					<span><a id="create_account" href="{{ url('/register') }}">REGISTER</a></span>
-					<span><a id="forgot" href="{{ url('/password/reset') }}">Forgot your Password?</a></span>
-					
-				</form>
-			</li>
-			 <li><a href="/pagamentos">Pagamentos</a></li>
-            <li><a href="/pt">Contate o PT</a></li>
-			<li><a href="/dadosPessoais">Dados Pessoais</a></li>
 			<li><a href="/home">Home</a></li>
+			<li><a href="/dadosPessoais">Dados Pessoais</a></li>
+			<li><a href="/pagamentos">Pagamentos</a></li>
+            <li><a href="/pt">Contate o PT</a></li>
+			<li id="login-trigger"><a href="#">{{ Auth::user()->username }} </a>
+				<div id="logout">
+					<ul class="dropdown-menu" role="menu">
+						<li id=logout>
+							<a href="{{ url('/logout') }}" onclick="event.preventDefault();
+											document.getElementById('logout-form').submit();">
+								Logout
+							</a>
+
+							<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+								{{ csrf_field() }}
+							<button type="submit" id="lobutton">logout</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</li>
           </ul>
         </nav>
       </div>
     </header>
 <body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<script>
-	//Abre menu com click
-	$(document).ready(function(){
-		$('#login-trigger').click(function() {
-			$(this).next('#login-form').slideToggle();
-			$(this).toggleClass('active');
-			
-
-			if ($(this).hasClass('active')){
-			$('#login-form').slideDown( "slow" );
-			}
-			else{
-				$('#login-form').slideUp( "slow" );
-			} 
-		})
-	});
-	
-	//Abre menu ao passar o rato
-	/* $("#login-trigger").hover(function() {
-		$( "#login-form" ).slideDown( "slow" );
-		
-		$('#login-form').hover(function(){
-			$(this).addClass('active');
-		}, function(){
-			$(this).removeClass('active');
-		})
-		
-		$('#login-form').mouseenter(function() {
-			$('#login-form').show();  
-			}).mouseleave(function() {      
-				if(!$('#login-form').hasClass('active') ){
-					$('#login-form').slideUp( "slow" );
-				}
-		});
-		
-	});
-	
-	$("#ab").hover(function() {
-		$( "#login-form" ).slideUp( "slow" );
-	}); */
-	
-</script>
 
 	@yield('content')
 

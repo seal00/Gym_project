@@ -18,6 +18,8 @@
                         You are logged in!
                 
                     @endif
+                    
+                   {{ Auth::user()->username }}
                 </div>
             </div>
         </div>

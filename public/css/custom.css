@@ -147,9 +147,11 @@ input[type=text], input[type=password] {
     right: 0;
     clear: both;
     background-color:#f4f4f4;
-    border-radius: 5px;
+     border-radius: 5px;
+    border-radius: 20px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    border:#e8491d 3px solid;
 }
 
 
