@@ -15,6 +15,9 @@ Auth::routes();
 //Route::get('/', 'HomeController@index');
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'HomeController@index');
+Route::get('/dadosPessoais', 'DadospessoaisController@dadosP');
+Route::get('/pt', 'PTController@pT');
+Route::get('/pagamentos', 'PagamentosController@pagamentos');
 /*Route::get('/admin/', ['middleware' => 'admin', function () {  
     return view('admin.admin');
 }]);*/
@@ -35,9 +38,9 @@ Route::group(['middleware' => 'instruct'], function () {
     return view('index');
 })->name('home');*/
 
-/* Route::get('/users/{id}', function($id){
+Route::get('/users/{id}', function($id){
     return $id.', You are logged in!';
-}); */
+});
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index');

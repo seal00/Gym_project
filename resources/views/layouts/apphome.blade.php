@@ -63,59 +63,60 @@
 					
 				</form>
 			</li>
-            <li><a href="#free">Free-Trial</a></li>
-			<li><a href="#serv">Serviços</a></li>
-			<li><a href="#home">Home</a></li>
+			 <li><a href="/pagamentos">Pagamentos</a></li>
+            <li><a href="/pt">Contate o PT</a></li>
+			<li><a href="/dadosPessoais">Dados Pessoais</a></li>
+			<li><a href="/home">Home</a></li>
           </ul>
         </nav>
       </div>
     </header>
 <body>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-	<script>
-		//Abre menu com click
-		$(document).ready(function(){
-			$('#login-trigger').click(function() {
-				$(this).next('#login-form').slideToggle();
-				$(this).toggleClass('active');
-				
+<script>
+	//Abre menu com click
+	$(document).ready(function(){
+		$('#login-trigger').click(function() {
+			$(this).next('#login-form').slideToggle();
+			$(this).toggleClass('active');
+			
 
-				if ($(this).hasClass('active')){
-				$('#login-form').slideDown( "slow" );
-				}
-				else{
+			if ($(this).hasClass('active')){
+			$('#login-form').slideDown( "slow" );
+			}
+			else{
+				$('#login-form').slideUp( "slow" );
+			} 
+		})
+	});
+	
+	//Abre menu ao passar o rato
+	/* $("#login-trigger").hover(function() {
+		$( "#login-form" ).slideDown( "slow" );
+		
+		$('#login-form').hover(function(){
+			$(this).addClass('active');
+		}, function(){
+			$(this).removeClass('active');
+		})
+		
+		$('#login-form').mouseenter(function() {
+			$('#login-form').show();  
+			}).mouseleave(function() {      
+				if(!$('#login-form').hasClass('active') ){
 					$('#login-form').slideUp( "slow" );
-				} 
-			})
+				}
 		});
 		
-		//Abre menu ao passar o rato
-		/* $("#login-trigger").hover(function() {
-			$( "#login-form" ).slideDown( "slow" );
-			
-			$('#login-form').hover(function(){
-				$(this).addClass('active');
-			}, function(){
-				$(this).removeClass('active');
-			})
-			
-			$('#login-form').mouseenter(function() {
-				$('#login-form').show();  
-				}).mouseleave(function() {      
-					if(!$('#login-form').hasClass('active') ){
-						$('#login-form').slideUp( "slow" );
-					}
-			});
-			
-		});
-		
-		$("#ab").hover(function() {
-			$( "#login-form" ).slideUp( "slow" );
-		}); */
-		
-	</script>
+	});
+	
+	$("#ab").hover(function() {
+		$( "#login-form" ).slideUp( "slow" );
+	}); */
+	
+</script>
 
 	@yield('content')
 
