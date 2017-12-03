@@ -10,7 +10,6 @@ body{
 .container{
   width:80%;
   margin:auto;
-  overflow:hidden;
 }
 
 /* Header **/
@@ -20,6 +19,7 @@ header{
   padding-top:30px;
   min-height:70px;
   border-bottom:#e8491d 3px solid;
+  margin-bottom: 20px;
 }
 
 
@@ -31,9 +31,8 @@ header a{
 }
 
 header li{
-  float: left;
   display:inline;
-  padding: 0 20px 0 20px;
+  padding: 0 10px 0 10px;
 }
 
 header #branding{
@@ -46,7 +45,6 @@ header #branding h1{
 
 header nav{
   float:right;
-  margin-top:10px;
 }
 
 header .highlight, header .current a{
@@ -58,11 +56,12 @@ header .highlight, header .current a{
 /*menu */
 li:not(#forgot):not(#create_account) {
     float: right;
-    color:#e8491d;
+
 }
 /*menu */
 li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account) {
-    padding: 20px 20px;
+    margin:0px;
+    padding: 15px 20px;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -71,6 +70,7 @@ li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account) {
 /*menu */
 li:not(#forgot):not(#create_account) a:not(#forgot):not(#create_account):hover {
     background-color: #e8491d;
+    padding-bottom: 22px;
 }
 
 /*LOGIN CSS*/

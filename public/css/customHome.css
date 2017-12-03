@@ -15,12 +15,11 @@ body{
 }
 .container{
   width:80%;
-  
+  margin:auto;
 }
 
 /* Header **/
 header{
-
   background:#35424a;
   color:#e8491d;
   padding-top:30px;
@@ -38,9 +37,8 @@ header a{
 }
 
 header li{
-  float: left;
   display:inline;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 10px 0px 10px;
 }
 
 header #branding{
