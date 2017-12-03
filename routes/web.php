@@ -15,12 +15,6 @@ Auth::routes();
 //Route::get('/', 'HomeController@index');
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'HomeController@index');
-Route::get('verifyEmailFirst', 'Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
-Route::get('verify/{email}/{verifyToken}', 'Auth\RegisterController@sendEmailDone')->name('sendEmailDone');
-//Route::get('/about', 'PagesController@about');
-//Route::get('/services', 'PagesController@services');
-//Route::get('/register', 'PessoaController@index');
-//Route::post('/register', 'PessoaController@add');
 /*Route::get('/admin/', ['middleware' => 'admin', function () {  
     return view('admin.admin');
 }]);*/
@@ -41,9 +35,9 @@ Route::group(['middleware' => 'instruct'], function () {
     return view('index');
 })->name('home');*/
 
-/* Route::get('/users/{id}', function($id){
+Route::get('/users/{id}', function($id){
     return $id.', You are logged in!';
-}); */
+});
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index');

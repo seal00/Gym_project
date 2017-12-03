@@ -10,6 +10,7 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<title>{{ config('app.name', 'Laravel') }}</title>
+	
 	<link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}" />
 	<script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
@@ -19,12 +20,15 @@
         ]); ?>
 	</script>
 </head>
-
-<body>
-	<button onclick="topFunction()" id="btopo" title="homepagebutton">Top</button>
-	<div id="menu">
-		<ul>
-			<li id="login">
+<button onclick="topFunction()" id="btopo" title="homepagebutton">Top</button>
+<header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Madeira</span> Gym</h1>
+        </div>
+        <nav>
+          <ul>
+            <li id="login">
 				<!--<a href="{{ url('/login') }}">Login</a>-->
 				<a id="login-trigger" href="#">Login</a>
 			
@@ -51,34 +55,23 @@
 					</span>
 					@endif
 
-					<button type="submit" id="lbutton">Login</button>
+					<button type="submit" id="lbutton">LOGIN</button>
 
 					<input type="checkbox" name="remember" {{ old( 'remember') ? 'checked' : ''}}> Remember </br>
-					<span>Forgot
-						<a id="forgot" href="{{ url('/password/reset') }}">Your Password?</a>
-					</span>
-					<span id="create">Not a member?
-						<a id="create_account" href="{{ url('/register') }}">
-							<br>Create an account free</a>
-					</span>
+					<span><a id="create_account" href="{{ url('/register') }}">REGISTER</a></span>
+					<span><a id="forgot" href="{{ url('/password/reset') }}">Forgot your Password?</a></span>
+					
 				</form>
 			</li>
-			
-
-			<li >
-				<a id="ab" href="#about">About</a>
-			</li>
-			<li>
-				<a href="#free">Free-Trial</a>
-			</li>
-			<li>
-				<a href="#serv">Serviços</a>
-			</li>
-			<li>
-				<a href="#home">Home</a>
-			</li>
-		</ul>
-	</div>
+            <li><a href="#free">Free-Trial</a></li>
+			<li><a href="#serv">Serviços</a></li>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#frontend">frontEnd</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+<body>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
