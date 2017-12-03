@@ -1,5 +1,5 @@
 @extends('layouts.apphome')
 
 @section('content')
- pagamentos
+ <h1>{{$title}}</h1>
 @endsection

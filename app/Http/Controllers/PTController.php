@@ -9,6 +9,7 @@ class PTController extends Controller
     //
     public function pT()
     {
-        return view('pt');
+        $title = 'Contacte o seu PT';
+        return view('pt')->with('title', $title);
     }
 }

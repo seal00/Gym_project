@@ -1,5 +1,5 @@
 @extends('layouts.apphome')
 
 @section('content')
- PT
+ <h1>{{$title}}</h1>
 @endsection

@@ -8,7 +8,7 @@ class DadospessoaisController extends Controller
 {
     //
     public function dadosP()
-    {
-        return view('dadosPessoais');
+    {   $title = 'Dados Pessoais';
+        return view('dadosPessoais')->with('title', $title);
     }
 }

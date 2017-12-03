@@ -9,6 +9,7 @@ class PagamentosController extends Controller
     //
     public function pagamentos()
     {
-        return view('pagamentos');
+       $title = 'Pagamentos';
+        return view('pagamentos')->with('title', $title);
     }
 }

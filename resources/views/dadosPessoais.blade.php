@@ -1,5 +1,7 @@
 @extends('layouts.apphome')
 
 @section('content')
- Dados
+    
+    <h1>{{$title}}</h1>
+
 @endsection
