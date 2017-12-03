@@ -71,26 +71,6 @@
       </div>
     </header>
 <body>
-	
-<!-- 	<div id="menu">
-		<ul>
-			
-			
-
-			<li >
-				<a id="ab" href="#about">About</a>
-			</li>
-			<li>
-				<a href="#free">Free-Trial</a>
-			</li>
-			<li>
-				<a href="#serv">Serviços</a>
-			</li>
-			<li>
-				
-			</li>
-		</ul>
-	</div> -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 

@@ -15,10 +15,6 @@ Auth::routes();
 //Route::get('/', 'HomeController@index');
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'HomeController@index');
-//Route::get('/about', 'PagesController@about');
-//Route::get('/services', 'PagesController@services');
-//Route::get('/register', 'PessoaController@index');
-//Route::post('/register', 'PessoaController@add');
 /*Route::get('/admin/', ['middleware' => 'admin', function () {  
     return view('admin.admin');
 }]);*/

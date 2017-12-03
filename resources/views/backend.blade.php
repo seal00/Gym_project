@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.backendlayout')
 
 @section('content')
             <section id="slide1" class="homeslide">
