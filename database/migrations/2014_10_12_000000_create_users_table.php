@@ -21,7 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('verifyToken')->nullable();
-            $table->boolean('status')->default(0);
+            //colocado a um para podermos fazer teste sem ter que confirmar sempre o email...
+            $table->boolean('status')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });
