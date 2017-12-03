@@ -6,6 +6,9 @@ use App\User;
 use App\Pessoa;
 use App\Cliente;
 use Validator;
+use Mail;
+use App\Mail\verifyEmail;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -75,6 +78,7 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'verifyToken' => Str::random(40),
         ]);
 
         $user->pessoa = Pessoa::create([
@@ -92,6 +96,17 @@ class RegisterController extends Controller
             'pessoa_id' => $user->pessoa->id,
         ]);
 
+        $thisUser = User::find($user->id);
+        $this->sendEmail($thisUser);
         return $user;
+    }
+
+    public function sendEmail($thisUser)
+    {
+        Mail::to($thisUser['email'])->send(new verifyEmail($thisUser));
+    }
+
+    public function verifyEmailFirst(){
+        return view('email.verifyEmailFirst');
     }
 }
