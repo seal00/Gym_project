@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    //new branch teste
     public function index(){
         if(Auth::check()) {
             return redirect('home');

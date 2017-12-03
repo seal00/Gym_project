@@ -15,9 +15,18 @@ Auth::routes();
 //Route::get('/', 'HomeController@index');
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'HomeController@index');
+
+//Route::get('verifyEmailFirst', 'Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
+Route::get('verify/{email}/{verifyToken}', 'Auth\RegisterController@sendEmailDone')->name('sendEmailDone');
+//Route::get('/about', 'PagesController@about');
+//Route::get('/services', 'PagesController@services');
+//Route::get('/register', 'PessoaController@index');
+//Route::post('/register', 'PessoaController@add');
+
 Route::get('/dadosPessoais', 'DadospessoaisController@dadosP');
 Route::get('/pt', 'PTController@pT');
 Route::get('/pagamentos', 'PagamentosController@pagamentos');
+
 /*Route::get('/admin/', ['middleware' => 'admin', function () {  
     return view('admin.admin');
 }]);*/
