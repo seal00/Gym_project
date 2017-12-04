@@ -1,31 +1,23 @@
 @extends('layouts.apphome')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
+            <div class="messages">
+                @if(session('login'))
+                    <div class="success">
+                        <strong>{{ session('login') }}</strong>
+                    </div>
+                @endif
+            </div>
+                
                     @if (Auth::user()->isAdmin())
-                        You are logged in as ADMIN!
+                    <br><p><strong>{{ Auth::user()->username }}, You are logged in as ADMIN!</strong></p>
 
                     @elseif (Auth::user()->isInst())
-                        You are logged in as instructor!
+                    <br><p><strong>{{ Auth::user()->username }}, You are logged in as instructor!</strong></p>
                     
                     @else
-                        You are logged in!
+                    <br><p><strong>{{ Auth::user()->username }}, You are logged in as Client!</strong></p>
                 
                     @endif
-                    
-                   {{ Auth::user()->username }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 @endsection

@@ -2,6 +2,34 @@
 
 @section('content')
             <section id="slide1" class="homeslide">
+            <div class="messages">
+                @if ($errors->has('username'))
+                <div class="error">
+					<span>
+						<strong>{{ $errors->first('username') }}</strong>
+						<br>
+                    </span>
+                </div>
+                @endif
+                @if ($errors->has('password'))
+                <div class="error">
+					<span>
+						<strong>{{ $errors->first('password') }}</strong>
+						<br>
+                    </span>
+                </div>
+				@endif
+                @if(session('status'))
+                    <div class="warning">
+                        <strong>{{ session('status') }}</strong>
+                    </div>
+                @endif
+                @if(session('activated'))
+                    <div class="success">
+                        <strong>{{ session('activated') }}</strong>
+                    </div>
+                @endif
+            </div>
                 <div id="home">
                     <div class="bodycontainer">
                         <div class="bodycontent">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Session;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -48,6 +49,7 @@ class LoginController extends Controller
     //override
     protected function credentials(Request $request)
     {
+        Session::flash('login', 'Login efectuado com sucesso!');
         return array_merge($request->only($this->username(), 'password'), ['status' => 1]);
     }
 }

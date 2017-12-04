@@ -77,7 +77,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        Session::flash('status', 'Registered! but verify your email to activate your account');
+        Session::flash('status', 'Registado! Verifique a sua caixa de correio para activar a conta.');
         $user = User::create([
             'username' => $data['username'],
             'email' => $data['email'],
@@ -113,7 +113,7 @@ class RegisterController extends Controller
         event(new Registered($user = $this->create($request->all())));
 
         //$this->guard()->login($user);
-        return redirect(route('login'));
+        return redirect('/');
 
         return $this->registered($request, $user)
             ?: redirect($this->redirectPath());
@@ -124,15 +124,16 @@ class RegisterController extends Controller
         Mail::to($thisUser['email'])->send(new verifyEmail($thisUser));
     }
 
-    public function verifyEmailFirst(){
+    /*public function verifyEmailFirst(){
         return view('email.verifyEmailFirst');
-    }
+    }*/
 
     public function sendEmailDone($email, $verifyToken){
         $user = User::where(['email'=>$email, 'verifyToken'=>$verifyToken])->first();
         if($user){
             User::where(['email'=>$email, 'verifyToken'=>$verifyToken])->update(['status'=>'1', 'verifyToken'=>NULL]);
-            return view('email.verification');
+            Session::flash('activated', 'Verificação efectuada com sucesso! Faça login e ENJOY THE RIDE!');
+            return redirect('/');
         }else{
             return 'User not found';
         }

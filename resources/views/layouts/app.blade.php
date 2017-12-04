@@ -38,23 +38,12 @@
 						<b>Username:</b>
 					</label>
 
-					<input type="text" placeholder="Username" id="username" type="username" class="form-control" name="username" required> @if ($errors->has('username'))
-					<span>
-						<strong>{{ $errors->first('username') }}</strong>
-						<br>
-					</span>
-					@endif
-
+					<input type="text" placeholder="Username" id="username" type="username" class="form-control" name="username" required>
 					<label>
 						<b>Password:</b>
 					</label>
-					<input type="password" placeholder="Password" class="form-control" name="password" required> @if ($errors->has('password'))
-					<span>
-						<strong>{{ $errors->first('password') }}</strong>
-						<br>
-					</span>
-					@endif
-
+					<input type="password" placeholder="Password" class="form-control" name="password" required>
+					
 					<button type="submit" id="lbutton">LOGIN</button>
 
 					<input type="checkbox" name="remember" {{ old( 'remember') ? 'checked' : ''}}> Remember </br>
@@ -63,10 +52,10 @@
 					
 				</form>
 			</li>
+			<li><a href="{{ url('/register') }}">Registo</a></li>
             <li><a href="#free">Free-Trial</a></li>
 			<li><a href="#serv">Serviços</a></li>
 			<li><a href="#home">Home</a></li>
-			<li><a href="#frontend">frontEnd</a></li>
           </ul>
         </nav>
       </div>
