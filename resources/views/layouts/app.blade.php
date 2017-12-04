@@ -30,7 +30,7 @@
           <ul>
             <li id="login">
 				<!--<a href="{{ url('/login') }}">Login</a>-->
-				<a id="login-trigger" href="#">Login</a>
+				<a id="login-trigger" href="#" onClick="return false;">Login</a>
 			
 				<form id="login-form" role="form" method="POST" action="{{ url('/login') }}">
 					{{ csrf_field() }}

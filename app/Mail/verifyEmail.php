@@ -30,6 +30,15 @@ class verifyEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('email.sendView');
+        $address = 'madeiragym@gmail.com';
+        $name = 'Madeira Gym';
+        $subject = 'Ativação de Conta';
+
+        return $this->view('email.sendView')
+        ->from($address, $name)
+        ->cc($address, $name)
+        ->bcc($address, $name)
+        ->replyTo($address, $name)
+        ->subject($subject);
     }
 }

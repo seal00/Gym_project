@@ -105,6 +105,7 @@ class RegisterController extends Controller
         return $user;
     }
 
+    //Override
     public function register(Request $request)
     {
         $this->validator($request->all())->validate();

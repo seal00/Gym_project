@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('verifyToken')->nullable();
             //colocado a um para podermos fazer teste sem ter que confirmar sempre o email...
-            $table->boolean('status')->default(1);
+            $table->boolean('status')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
