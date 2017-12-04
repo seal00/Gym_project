@@ -16,12 +16,12 @@ class CreatePessoaTable extends Migration
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('contacto');
-            $table->string('nascimento');
-            $table->integer('nif');
-            $table->enum('sexo', array('Feminino', 'Masculino'));
-            $table->float('peso');
-            $table->float('altura');
+            $table->string('contacto')->nullable();
+            $table->string('nascimento')->nullable();
+            $table->integer('nif')->nullable();
+            $table->enum('sexo', array('Feminino', 'Masculino'))->nullable();
+            $table->float('peso')->nullable();
+            $table->float('altura')->nullable();
             $table->integer('user_id')->unsigned()->unique();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('morada_id')->unsigned()->index()->nullable();

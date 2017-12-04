@@ -14,8 +14,8 @@ class CreateInstrutorTable extends Migration
     public function up()
     {
         Schema::create('instrutor', function (Blueprint $table) {
-            $table->integer('salario');
-            $table->enum('categoria', array('Personal Training Yoga', 'Personal Training Pilates', 'Personal Training'));
+            $table->integer('salario')->nullable();
+            $table->enum('categoria', array('Personal Training Yoga', 'Personal Training Pilates', 'Personal Training'))->nullable();
             $table->integer('pessoa_id')->unsigned()->unique();
             $table->primary('pessoa_id');
             $table->foreign('pessoa_id')->references('id')->on('pessoas')->onDelete('cascade');

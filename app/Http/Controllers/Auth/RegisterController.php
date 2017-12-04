@@ -59,13 +59,13 @@ class RegisterController extends Controller
             'username' => 'required|unique:users|max:20',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-            'contacto' => 'required|regex:/^[0-9]{9}$/',
+            /* 'contacto' => 'required|regex:/^[0-9]{9}$/',
             'name' => 'required|max:255',
             'nascimento' => 'required|regex:/^[0-3]?[0-9].[0-3]?[0-9].(?:[0-9]{2})?[0-9]{2}$/',
             'nif' => 'required|max:255',
             'sexo' => 'required|max:255',
             'peso' => 'required|max:255',
-            'altura' => 'required|max:255',
+            'altura' => 'required|max:255', */
         ]);
     }
 
@@ -87,12 +87,12 @@ class RegisterController extends Controller
 
         $user->pessoa = Pessoa::create([
             'name' => $data['name'],
-            'contacto' => $data['contacto'],
+            /* 'contacto' => $data['contacto'],
             'nascimento' => $data['nascimento'],
             'nif' => $data['nif'],
             'sexo' => $data['sexo'],
             'peso' => $data['peso'],
-            'altura' => $data['altura'],
+            'altura' => $data['altura'], */
             'user_id' => $user->id,
         ]);
 
