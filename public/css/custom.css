@@ -113,12 +113,14 @@ input[type=text], input[type=password] {
 }
 
 #lbutton {
+    
     font-size: 14px;
     background-color: #35424a;
     color: white;
-    padding: 14px 20px;
+    padding: 14px;
     margin: 10px;
-    border: none;
+    margin-left: 15%;
+    margin-right: 15%;
     cursor: pointer;
     width: 70%;
 }
@@ -166,7 +168,26 @@ input[type=text], input[type=password] {
 #login-form .submit {
     float: right;
 }
-#create_account{
+
+#create_account, #forgot{
+    color: black;
+    text-transform: none;
+    font-size:12px;
+}
+
+#create_account:hover{
+    color: #0423ad;
+    text-decoration: underline;
+}
+
+#forgot:hover{
+    color: #0423ad;
+    text-decoration: underline;
+}
+
+
+
+/* #create_account{
     float: left;
     font-size: 14px;
     color: white;
@@ -200,7 +221,7 @@ input[type=text], input[type=password] {
 
 #forgot:hover {
     background-color: #e8491d;;
-}
+} */
 
 /*boxes de aviso*/ 
 .messages{
@@ -238,4 +259,24 @@ input[type=text], input[type=password] {
     color: #D63301;
     background-color: #FFCCBA;
     background-image: url('/images/icones/validation.png');
+}
+
+.loginbox  {
+    top: 95px;
+    color:#35424a;
+    padding: 30px;
+    width: 25%;
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    margin: 35%;
+    margin-top: 5%;
+    right: 0;
+    clear: both;
+    background-color:#f4f4f4;
+    /*border-radius: 5px;*/
+    border-radius: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border:#e8491d 3px solid;
 }

@@ -44,11 +44,11 @@
 					</label>
 					<input type="password" placeholder="Password" class="form-control" name="password" required>
 					
+					<input type="checkbox" name="remember" {{ old( 'remember') ? 'checked' : ''}}> Remember </br>
 					<button type="submit" id="lbutton">LOGIN</button>
 
-					<input type="checkbox" name="remember" {{ old( 'remember') ? 'checked' : ''}}> Remember </br>
-					<span><a id="create_account" href="{{ url('/register') }}">REGISTER</a></span>
-					<span><a id="forgot" href="{{ url('/password/reset') }}">Forgot your Password?</a></span>
+					<a id="create_account" href="{{ url('/register') }}">Register</a><b> - </b>
+					<a id="forgot" href="{{ url('/password/reset') }}">Forgot your Password?</a>
 					
 				</form>
 			</li>
