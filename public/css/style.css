@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fff;
-  padding-left: 240px;
 }
 main {
   position: relative;
@@ -28,10 +27,10 @@ main .helper span {
 }
 .menu {
   background: #466170;
-  height: 100vh;
+  height: 84vh;
   width: 240px;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 5;
   outline: none;
@@ -63,7 +62,7 @@ main .helper span {
 .menu ul {
   list-style: none;
   padding: 0.5em 0;
-  margin: 0;
+  margin: 1em;
 }
 .menu ul li {
   padding: 0.5em 1em 0.5em 3em;
@@ -88,7 +87,7 @@ main .helper span {
   background-image: url("http://www.entypo.com/images//tools.svg");
 }
 .menu ul li:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #e8491d;
 }
 .menu ul li:focus {
   outline: none;

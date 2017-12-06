@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Perfil: {{Auth::user()->username}}</title>
+@extends('layouts.apphome')
 
-  <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
-  
+@section('content')
 
-  
-</head>
+@push('styles')
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+@endpush
 
 <body>
   <nav class="menu" tabindex="0">
@@ -25,5 +21,4 @@
   </ul>
 </nav>
 
-</body>
-</html>
+@endsection

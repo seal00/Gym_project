@@ -12,6 +12,7 @@
 	<title>{{ config('app.name', 'Laravel') }}</title>
 	
 	<link rel="stylesheet" href="{{ URL::asset('css/customHome.css') }}" />
+	@stack('styles')
 	<script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
 	<script>
@@ -49,29 +50,6 @@
 			<li><a href="/pagamentos">Pagamentos</a></li>
 			<li><a href="/pt">Contate o PT</a></li>
 			<li><a href="/home">Home</a></li>
-			
-			
-			
-
-
-
-			<!-- <li id="login-trigger"><a href="" onClick="return false;">{{Auth::user()->username}}<!--<div id="avatar"></div>--></a>
-				<!-- <div id="logout">
-					<ul class="dropdown-menu" role="menu">
-						<li id=logout>
-							<a href="{{ url('/logout') }}" onclick="event.preventDefault();
-											document.getElementById('logout-form').submit();">
-								Logout
-							</a>
-
-							<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-								{{ csrf_field() }}
-							<button type="submit" id="lobutton">logout</button>
-							</form>
-						</li>
-					</ul>
-				</div>
-			</li> -->
           </ul>
 	  </div>
     </header>
