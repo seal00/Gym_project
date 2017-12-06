@@ -29,7 +29,7 @@
 			<li class="dropdown">
 				<a href="javascript:void(0)" class="dropbtn">Olá, <u>{{Auth::user()->username}}</u></a>
 				<div class="dropdown-content">
-					<a href="#">Ver Perfil</a>
+					<a href="/home/{{Auth::user()->username}}">Ver Perfil</a>
 					<a href="#">Ver amigos</a>
 					<a href="#">Ver pagamentos</a>
 					<a href="#">Ver horários</a>
