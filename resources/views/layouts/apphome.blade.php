@@ -12,7 +12,6 @@
 	<title>{{ config('app.name', 'Laravel') }}</title>
 	
 	<link rel="stylesheet" href="{{ URL::asset('css/customHome.css') }}" />
-	@stack('styles')
 	<script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
 	<script>
@@ -46,10 +45,10 @@
 					</form>
 				</div>
 			</li>
-			<li><a href="/dadosPessoais">Dados Pessoais</a></li>
-			<li><a href="/pagamentos">Pagamentos</a></li>
-			<li><a href="/pt">Contate o PT</a></li>
-			<li><a href="/home">Home</a></li>
+			<li class="liteste"><a href="/dadosPessoais">Dados Pessoais</a></li>
+			<li class="liteste"><a href="/pagamentos">Pagamentos</a></li>
+			<li class="liteste"><a href="/pt">Contate o PT</a></li>
+			<li class="liteste"><a href="/home">Home</a></li>
           </ul>
 	  </div>
     </header>

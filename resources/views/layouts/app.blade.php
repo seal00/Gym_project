@@ -27,7 +27,7 @@
           <h1><span class="highlight">Madeira</span> Gym</h1>
         </div>
         <nav>
-          <ul>
+          <ul class="ulteste">
             <li id="login">
 				<!--<a href="{{ url('/login') }}">Login</a>-->
 				<a id="login-trigger" href="#" onClick="return false;">Login</a>
