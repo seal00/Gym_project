@@ -7,8 +7,8 @@
 	<div class="smartphone-menu-trigger"></div>
   <header class="avatar">
   <h2>{{Auth::user()->username}}</h2><br>
-    <img src="/uploads/avatars/{{$user->avatar}}" />
-    <form enctype="multipart/form-data" action="/home/{{$user->username}}" method="post">
+    <img src="/uploads/avatars/{{Auth::user()->avatar}}" />
+    <form enctype="multipart/form-data" action="/home/{{Auth::user()->username}}" method="post">
       <label id="upload_i" for="form-file">Alterar a imagem de perfil</label>
       <input type="file" name="avatar" id="form-file" class="hidden" />
       <!-- <input type="file" name="avatar"> -->
