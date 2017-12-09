@@ -1,4 +1,4 @@
-@extends('layouts.apphome')
+@extends('layouts.app')
 
 @section('content')
 
@@ -6,8 +6,15 @@
   <nav class="menu" tabindex="0">
 	<div class="smartphone-menu-trigger"></div>
   <header class="avatar">
-		<img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" />
-    <h2>{{Auth::user()->username}}</h2>
+  <h2>{{Auth::user()->username}}</h2><br>
+    <img src="/uploads/avatars/{{$user->avatar}}" />
+    <form enctype="multipart/form-data" action="/home/{{$user->username}}" method="post">
+      <label id="upload_i" for="form-file">Alterar a imagem de perfil</label>
+      <input type="file" name="avatar" id="form-file" class="hidden" />
+      <!-- <input type="file" name="avatar"> -->
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      <input type="submit" value="Submeter">
+    </form>
   </header>
 	<ul id="ulperfil">
     <li tabindex="0" class="icon-dashboard"><span><a id="ref" href="#">Ver amigos</a></span></li>

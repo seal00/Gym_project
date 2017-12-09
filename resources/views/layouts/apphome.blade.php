@@ -25,7 +25,7 @@
         <div id="branding">
           <h1><span class="highlight">Madeira</span> Gym</h1>
         </div>
-          <ul>
+          <ul class="ulheader">
 			<li class="dropdown">
 				<a href="javascript:void(0)" class="dropbtn">Olá, <u>{{Auth::user()->username}}</u></a>
 				<div class="dropdown-content">

@@ -25,8 +25,9 @@
       <div class="container">
         <div id="branding">
           <h1><span class="highlight">Madeira</span> Gym</h1>
-        </div>
-        <nav>
+		</div>
+		@if (Auth::guest())
+        <nav class="navclass">
           <ul class="ulteste">
             <li id="login">
 				<!--<a href="{{ url('/login') }}">Login</a>-->
@@ -52,12 +53,43 @@
 					
 				</form>
 			</li>
-			<li><a href="{{ url('/register') }}">Registo</a></li>
-            <li><a href="#free">Free-Trial</a></li>
-			<li><a href="#serv">Serviços</a></li>
-			<li><a href="#home">Home</a></li>
+			<li class="liteste"><a href="{{ url('/register') }}">Registo</a></li>
+            <li class="liteste"><a href="#free">Free-Trial</a></li>
+			<li class="liteste"><a href="#serv">Serviços</a></li>
+			<li class="liteste"><a href="#home">Home</a></li>
           </ul>
-        </nav>
+		</nav>
+		@else
+		<ul class="ullogout">
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">
+				<img id="log-teste" src="/uploads/avatars/{{ Auth::user()->avatar }}">
+				{{ Auth::user()->username }}
+				</a>
+				<div class="dropdown-content">
+					<a href="/home/{{Auth::user()->username}}">Ver Perfil</a>
+					<a href="#">Ver amigos</a>
+					<a href="#">Ver pagamentos</a>
+					<a href="#">Ver horários</a>
+					<a href="#">inscrever em aulas</a>
+					<a href="#">Definições Pessoais</a>
+					<a href="{{ url('/logout') }}" onclick="event.preventDefault();
+											document.getElementById('logout-form').submit();">
+								Logout
+					</a>
+					<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+								{{ csrf_field() }}
+							<button type="submit" id="lobutton">logout</button>
+					</form>
+				</div>
+			</li>
+			<li class="liteste"><a href="/dadosPessoais">Dados Pessoais</a></li>
+			<li class="liteste"><a href="/pagamentos">Pagamentos</a></li>
+			<li class="liteste"><a href="/pt">Contate o PT</a></li>
+			<li class="liteste"><a href="/home">Home</a></li>
+		  </ul>
+		  @endif
+
       </div>
     </header>
 <body>

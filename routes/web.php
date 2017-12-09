@@ -16,6 +16,7 @@ Auth::routes();
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/home/{username}', 'PerfilController@index');
+Route::post('/home/{username}', 'PerfilController@update_avatar');
 
 //Route::get('verifyEmailFirst', 'Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
 Route::get('verify/{email}/{verifyToken}', 'Auth\RegisterController@sendEmailDone')->name('sendEmailDone');

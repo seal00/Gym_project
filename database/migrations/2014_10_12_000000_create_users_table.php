@@ -19,9 +19,10 @@ class CreateUsersTable extends Migration
             $table->boolean('isAdmin')->default(0);
             $table->boolean('isInst')->default(0);
             $table->string('email')->unique();
+            $table->string('avatar')->default('default.jpg');
             $table->string('password');
             $table->string('verifyToken')->nullable();
-            //colocado a um para podermos fazer teste sem ter que confirmar sempre o email...
+            //colocado a 1 para podermos fazer teste sem ter que confirmar sempre o email...
             $table->boolean('status')->default(0);
             $table->rememberToken();
             $table->timestamps();
