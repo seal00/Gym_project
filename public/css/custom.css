@@ -420,7 +420,6 @@ ul:not(#ulperfil) li {
 body {
     margin: 0;
     font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
-    color: #fff;
   }
   main {
     position: relative;
@@ -625,4 +624,45 @@ body {
     }
   
   }
-  
+
+  /*========================== PROFILE CARD =======================*/
+
+  .profile_d{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    height:320px;
+    width:750px;
+    background: #466170;
+    position: absolute;
+    top: 190px;
+    left: 20%;
+    margin-left: 148px;
+    border:#e8491d 3px solid;
+  }
+
+.profile_d:hover {
+    box-shadow: 0 15px 39px 0 rgba(0,0,0,0.2);
+}
+
+#img_prof {
+  border-radius: 0 0 5px 5px;
+  border-right: #e8491d 3px solid;
+}
+
+.prof_cont {
+  position: relative;
+  width: 56%;
+  height: 240px;
+  float: right;
+}
+
+.prof_cont h3, .prof_cont p {
+  color: white;
+}
+
+#change_img {
+  position: absolute;
+  top: 100%;
+  left: 15%;
+}
