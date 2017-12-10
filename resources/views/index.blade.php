@@ -35,6 +35,7 @@
                 <div class="bodycontainer">
                     <div class="bodycontent">
                         <h2>Publicidade Inicial</h2>
+                        <!-- <img src="/images/wallpapers/wall1.jpg" style="width:100%"> -->
                     </div>
                 </div>
             </div>

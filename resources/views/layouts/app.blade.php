@@ -21,7 +21,7 @@
 	</script>
 </head>
 <button onclick="topFunction()" id="btopo" title="homepagebutton">Top</button>
-<header>
+<header class="header">
       <div class="container">
         <div id="branding">
           <h1><span class="highlight">Madeira</span> Gym</h1>
@@ -112,6 +112,33 @@
 				} 
 			})
 		});
+
+		//efeito de slowdown quando o utilizador volta ao topo
+		/*$(window).scroll(function(){
+			$("header").stop().animate({"marginTop": ($(window).scrollTop()) + "px"}, "slow" );
+		  });*/
+
+
+		  (function($) {
+			  var element = $('.header'),
+			  originalY = element.offset().top;
+			  
+			  // Space between element and top of screen (when scrolling)
+			  var topMargin = 10;
+			  
+			  // Should probably be set in CSS; but here just for emphasis
+			  element.css('position', 'relative');
+			  
+			  $(window).on('scroll', function(event) {
+				  var scrollTop = $(window).scrollTop();
+				  
+				  element.stop(false, false).animate({
+					  top: scrollTop < originalY
+					  ? 0
+					: scrollTop - originalY + topMargin
+				}, 300);
+			});
+		})(jQuery);
 		
 		//Abre menu ao passar o rato
 		/* $("#login-trigger").hover(function() {
