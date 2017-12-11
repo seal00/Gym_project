@@ -1,27 +1,110 @@
-/* div do menu */
+/* div do menu 
 #menu 
 {
 }
 #slide1, #slide2, #slide3,#slide4{
-}
+}*/
 
 /*divisorias / categorias do website*/
 #home,#serv,#free,#about{
     margin-top: 10px;
     margin-bottom: 10px;
+    /*ver bem isto*/
+    margin:auto;
     border-style: solid;
     border-width: 1px;
     /*height: 500px;*/
+    width:80%;
     height: 100vh;
     padding: 10px;
 }
 
+#home{
+  height: 75vh;
+}
+
+/*=========================== SLIDESHOW ==============================*/
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.fade img{
+  height: 75vh;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
 /*================================ CABEÇALHO ============================*/
 
-*{
-    margin:0;
-    padding:0;
-}
 h1{
     margin-left: 20px;
 }
@@ -33,6 +116,7 @@ body{
     background-color:#f4f4f4;
     overflow-x:hidden;
 }
+
 .container{
     width:80%;
     margin:auto;
