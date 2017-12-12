@@ -5,6 +5,11 @@ F:\MEI\ACR_Project\Gym_project> sass --watch resources\assets\sass\costum.scss:p
 
 /* div do menu */
 
+/*VARIAVEIS*/
+
+$laranja: #e8491d;
+$cinza: #35424a;
+
 #menu {}
 
 #slide1,
@@ -63,11 +68,11 @@ body {
 /* Header **/
 
 header {
-    background: #35424a;
-    color: #e8491d;
+    background: $cinza;
+    color: $laranja;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+    border-bottom: $laranja 3px solid;
     margin-bottom: 20px;
 }
 
@@ -113,7 +118,7 @@ input[type=password] {
     padding: 10px 20px;
     border-style: solid;
     border-width: 1px;
-    border-color: #35424a;
+    border-color: $cinza;
     box-sizing: border-box;
 }
 
@@ -126,7 +131,7 @@ input[type=password] {
     outline: none;
     bottom: 10px;
     right: 10px;
-    background-color: #35424a;
+    background-color: $cinza;
     color: white;
     cursor: pointer;
     padding: 10px;
@@ -137,7 +142,7 @@ input[type=password] {
 /* botao que volta para o topo*/
 
 #btopo:hover {
-    background-color: #e8491d;
+    background-color: $laranja;
 }
 
 
@@ -145,7 +150,7 @@ input[type=password] {
 
 #lbutton {
     font-size: 14px;
-    background-color: #35424a;
+    background-color: $cinza;
     color: white;
     padding: 14px;
     margin: 10px;
@@ -156,7 +161,7 @@ input[type=password] {
 }
 
 #lbutton:hover {
-    background-color: #e8491d;
+    background-color: $laranja;
     ;
 }
 
@@ -170,13 +175,13 @@ input[type=password] {
 
 #login a:not(#create_account):not(#forgot):hover {
     padding-bottom: 22px;
-    background-color: #e8491d;
+    background-color: $laranja;
     ;
 }
 
 #login-form {
     top: 95px;
-    color: #35424a;
+    color: $cinza;
     padding: 22px;
     float: right;
     width: 30%;
@@ -192,7 +197,7 @@ input[type=password] {
     border-radius: 20px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border: #e8491d 3px solid;
+    border: $laranja 3px solid;
 }
 
 #login-form .text {
@@ -234,10 +239,10 @@ input[type=password] {
     text-decoration: none;
     border: none;
     outline: none;
-    background-color: #e8491d;
+    background-color: $laranja;
 }
 #create_account:hover {
-    background-color: #35424a;;
+    background-color: $cinza;;
 }
 #forgot {
     font-size: 14px;
@@ -250,10 +255,10 @@ input[type=password] {
     text-decoration: none;
     border: none;
     outline: none;
-    background-color: #35424a;
+    background-color: $cinza;
 }
 #forgot:hover {
-    background-color: #e8491d;;
+    background-color: $laranja;;
 } */
 
 
@@ -261,7 +266,7 @@ input[type=password] {
 
 .loginbox {
     top: 95px;
-    color: #35424a;
+    color: $cinza;
     padding: 30px;
     width: 25%;
     border-style: solid;
@@ -276,7 +281,7 @@ input[type=password] {
     border-radius: 20px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    border: #e8491d 3px solid;
+    border: $laranja 3px solid;
 }
 
 
@@ -362,7 +367,7 @@ ul:not(#ulperfil) li {
     text-align: center;
     padding: 15px 20px;
     text-decoration: none;
-    background-color: #35424a;
+    background-color: $cinza;
 }
 
 
@@ -381,18 +386,18 @@ ul:not(#ulperfil) li {
 
 .dropdown-content>a {
     margin-top: 0px;
-    border-bottom: #35424a 3px solid;
+    border-bottom: $cinza 3px solid;
     background-color: #798085;
 }
 
 .liteste a:hover {
     padding-bottom: 22px;
-    background-color: #e8491d;
+    background-color: $laranja;
 }
 
 .dropdown:hover .dropbtn {
     padding-bottom: 22px;
-    background-color: #e8491d;
+    background-color: $laranja;
 }
 
 .dropdown {
@@ -418,7 +423,7 @@ ul:not(#ulperfil) li {
 }
 
 .dropdown-content a:hover {
-    background-color: #e8491d;
+    background-color: $laranja;
 }
 
 .dropdown:hover .dropdown-content {
@@ -437,7 +442,7 @@ ul:not(#ulperfil) li {
     top: 10px;
     left: 10px;
     border-radius: 40%;
-    border: 1.5px solid #e8491d;
+    border: 1.5px solid $laranja;
 }
 
 
@@ -456,7 +461,7 @@ ul:not(#ulperfil) li {
 
 #upload_i:hover {
     text-decoration: underline;
-    color: #e8491d;
+    color: $laranja;
 }
 
 .hidden {
@@ -506,14 +511,14 @@ main .helper span {
     left: 0;
     z-index: 5;
     outline: none;
-    border-right: #e8491d 3px solid;
+    border-right: $laranja 3px solid;
 }
 
 .menu .avatar {
-    background: #35424a;
+    background: $cinza;
     padding: 2.5em 0.5em;
     text-align: center;
-    border-bottom: #e8491d 3px solid;
+    border-bottom: $laranja 3px solid;
 }
 
 .icon-dashboard a,
@@ -528,7 +533,7 @@ main .helper span {
     width: 100px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #e8491d;
+    border: 4px solid $laranja;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
@@ -556,7 +561,7 @@ main .helper span {
 
 
 /*.menu #ulperfil li:hover{
-    background-color: #e8491d;
+    background-color: $laranja;
   } */
 
 .menu #ulperfil li.icon-dashboard {
@@ -576,7 +581,7 @@ main .helper span {
 }
 
 .menu #ulperfil li:hover {
-    background-color: #e8491d;
+    background-color: $laranja;
 }
 
 .menu #ulperfil li:focus {
@@ -705,7 +710,7 @@ main .helper span {
     top: 190px;
     left: 20%;
     margin-left: 148px;
-    border: #e8491d 3px solid;
+    border: $laranja 3px solid;
 }
 
 .profile_d:hover {
@@ -714,7 +719,7 @@ main .helper span {
 
 #img_prof {
     border-radius: 0 0 5px 5px;
-    border-right: #e8491d 3px solid;
+    border-right: $laranja 3px solid;
 }
 
 .prof_cont {
