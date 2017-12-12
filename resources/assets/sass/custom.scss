@@ -1,0 +1,736 @@
+/* 
+Sacar e install o Ruby, se não tiverem: https://rubyinstaller.org/
+Instalar o sass, se não tiverem: gem install sass
+F:\MEI\ACR_Project\Gym_project> sass --watch resources\assets\sass\costum.scss:public\css\costum.css */
+
+/* div do menu */
+
+#menu {}
+
+#slide1,
+#slide2,
+#slide3,
+#slide4 {}
+
+
+/*divisorias / categorias do website*/
+
+#home,
+#serv,
+#free,
+#about {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*ver bem isto*/
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    /*height: 500px;*/
+    width: 80%;
+    height: 100vh;
+    padding: 10px;
+}
+
+
+/*================================ CABEÇALHO ============================*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+
+/*corpo do website */
+
+body {
+    /* background-color: white;*/
+    margin: 0 auto;
+    font-family: "Arial", Serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* Header **/
+
+header {
+    background: #35424a;
+    color: #e8491d;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    margin-bottom: 20px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    font-size: 16px;
+}
+
+header li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header .highlight,
+header .current a {
+    color: white;
+    font-weight: bold;
+}
+
+#logout {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*LOGIN CSS*/
+
+input[type=text],
+input[type=password] {
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #35424a;
+    box-sizing: border-box;
+}
+
+
+/* botao que volta para o topo*/
+
+#btopo {
+    position: fixed;
+    border: none;
+    outline: none;
+    bottom: 10px;
+    right: 10px;
+    background-color: #35424a;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* botao que volta para o topo*/
+
+#btopo:hover {
+    background-color: #e8491d;
+}
+
+
+/*=================== CAIXA DE LOGIN =====================*/
+
+#lbutton {
+    font-size: 14px;
+    background-color: #35424a;
+    color: white;
+    padding: 14px;
+    margin: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    cursor: pointer;
+    width: 70%;
+}
+
+#lbutton:hover {
+    background-color: #e8491d;
+    ;
+}
+
+#login {
+    list-style: none;
+    height: 40px;
+    float: right;
+    right: 0;
+    margin-bottom: 5px;
+}
+
+#login a:not(#create_account):not(#forgot):hover {
+    padding-bottom: 22px;
+    background-color: #e8491d;
+    ;
+}
+
+#login-form {
+    top: 95px;
+    color: #35424a;
+    padding: 22px;
+    float: right;
+    width: 30%;
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    margin-top: 6px;
+    display: none;
+    right: 0;
+    clear: both;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border-radius: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: #e8491d 3px solid;
+}
+
+#login-form .text {
+    width: 100%;
+    float: right;
+    margin-bottom: 2%;
+}
+
+#login-form .submit {
+    float: right;
+}
+
+#create_account,
+#forgot {
+    color: black;
+    text-transform: none;
+    font-size: 12px;
+}
+
+#create_account:hover {
+    color: #0423ad;
+    text-decoration: underline;
+}
+
+#forgot:hover {
+    color: #0423ad;
+    text-decoration: underline;
+}
+
+
+/* #create_account{
+    float: left;
+    font-size: 14px;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #e8491d;
+}
+#create_account:hover {
+    background-color: #35424a;;
+}
+#forgot {
+    font-size: 14px;
+    float: left;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0 10px 10px;
+    width: 45%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #35424a;
+}
+#forgot:hover {
+    background-color: #e8491d;;
+} */
+
+
+/*ATUALMENTE FORA DE USO*/
+
+.loginbox {
+    top: 95px;
+    color: #35424a;
+    padding: 30px;
+    width: 25%;
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    margin: 35%;
+    margin-top: 5%;
+    right: 0;
+    clear: both;
+    background-color: #f4f4f4;
+    /*border-radius: 5px;*/
+    border-radius: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: #e8491d 3px solid;
+}
+
+
+/*==========================BOXES  DE AVISO====================*/
+
+.messages {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.info,
+.success,
+.warning,
+.error,
+.validation {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('/images/icones/info.png');
+}
+
+.success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url('/images/icones/validation.png');
+}
+
+.warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('/images/icones/warning.png');
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('/images/icones/error.png');
+}
+
+.validation {
+    color: #D63301;
+    background-color: #FFCCBA;
+    background-image: url('/images/icones/validation.png');
+}
+
+
+/*========================MENU DE COM OPÇÕES DO UTILIZADOR=======================*/
+
+ul:not(#ulperfil) {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul:not(#ulperfil) li {
+    float: right;
+}
+
+
+/*li a{
+    margin:0px;
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}*/
+
+#login>a,
+.liteste a,
+.dropbtn {
+    margin-top: 15px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    background-color: #35424a;
+}
+
+
+/*.dropdown-content{
+    position: absolute;
+}*/
+
+.dropdown-content a ul {
+    margin: 0px;
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-table
+}
+
+.dropdown-content>a {
+    margin-top: 0px;
+    border-bottom: #35424a 3px solid;
+    background-color: #798085;
+}
+
+.liteste a:hover {
+    padding-bottom: 22px;
+    background-color: #e8491d;
+}
+
+.dropdown:hover .dropbtn {
+    padding-bottom: 22px;
+    background-color: #e8491d;
+}
+
+.dropdown {
+    /*position: relative;*/
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.911);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #e8491d;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#username {}
+
+
+/*===================IMAGEM DE PERFIL NO CANTO SUPERIOR DIREITO=====================*/
+
+#log-teste {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 40%;
+    border: 1.5px solid #e8491d;
+}
+
+
+/*================== ALTERAÇÃO DE IMAGEM DE PERFIL=======================*/
+
+#upload_i {
+    cursor: pointer;
+    margin: auto;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+#upload_i:hover {
+    text-decoration: underline;
+    color: #e8491d;
+}
+
+.hidden {
+    position: absolute;
+    left: -99999px;
+}
+
+
+/*=============================== MENU DE PERFIL DE USER =========================*/
+
+body {
+    margin: 0;
+    font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+main .helper {
+    background: rgba(0, 0, 0, 0.2);
+    color: #ffea92;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    padding: 1.2em 2em;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+main .helper span {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.4em;
+    display: block;
+}
+
+.menu {
+    background: #466170;
+    height: 84vh;
+    width: 240px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    outline: none;
+    border-right: #e8491d 3px solid;
+}
+
+.menu .avatar {
+    background: #35424a;
+    padding: 2.5em 0.5em;
+    text-align: center;
+    border-bottom: #e8491d 3px solid;
+}
+
+.icon-dashboard a,
+.icon-customers a,
+.icon-users a,
+.icon-settings a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.menu .avatar img {
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #e8491d;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.menu .avatar h2 {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.menu #ulperfil {
+    list-style: none;
+    /*padding: 0.5em 0;*/
+    margin: 2em;
+}
+
+.menu #ulperfil li {
+    padding: 0.5em 1em 0.5em 3.5em;
+    font-size: 0.95em;
+    font-weight: regular;
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    background-size: auto 20px;
+    transition: all 0.15s linear;
+    cursor: pointer;
+}
+
+
+/*.menu #ulperfil li:hover{
+    background-color: #e8491d;
+  } */
+
+.menu #ulperfil li.icon-dashboard {
+    background-image: url("http://www.entypo.com/images//gauge.svg");
+}
+
+.menu #ulperfil li.icon-customers {
+    background-image: url("http://www.entypo.com/images//briefcase.svg");
+}
+
+.menu #ulperfil li.icon-users {
+    background-image: url("http://www.entypo.com/images//users.svg");
+}
+
+.menu #ulperfil li.icon-settings {
+    background-image: url("http://www.entypo.com/images//tools.svg");
+}
+
+.menu #ulperfil li:hover {
+    background-color: #e8491d;
+}
+
+.menu #ulperfil li:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 900px) and (min-width: 400px) {
+    body {
+        padding-left: 90px;
+    }
+    .menu {
+        width: 90px;
+    }
+    .menu .avatar {
+        padding: 0.5em;
+        position: relative;
+    }
+    .menu .avatar img {
+        width: 60px;
+    }
+    .menu .avatar h2 {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        margin: 0;
+        min-width: 200px;
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.4);
+        transform: translate3d(-20px, -50%, 0);
+        transition: all 0.15s ease-in-out;
+    }
+    .menu .avatar:hover h2 {
+        opacity: 1;
+        transform: translate3d(0px, -50%, 0);
+    }
+    .menu #ulperfil li {
+        height: 60px;
+        background-position: center center;
+        background-size: 30px auto;
+        position: relative;
+    }
+    .menu #ulperfil li span {
+        opacity: 0;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.2em 0.5em;
+        border-radius: 4px;
+        top: 50%;
+        left: 80px;
+        transform: translate3d(-15px, -50%, 0);
+        transition: all 0.15s ease-in-out;
+    }
+    .menu #ulperfil li span:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: -5px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 5px solid rgba(0, 0, 0, 0.5);
+        transform: translateY(-50%);
+    }
+    .menu #ulperfil li:hover span {
+        opacity: 1;
+        transform: translate3d(0px, -50%, 0);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding-left: 0;
+    }
+    .menu {
+        width: 230px;
+        box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);
+        transform: translate3d(-230px, 0, 0);
+        transition: all 0.3s ease-in-out;
+    }
+    .menu .smartphone-menu-trigger {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 100%;
+        background: #5bc995;
+    }
+    .menu .smartphone-menu-trigger:before,
+    .menu .smartphone-menu-trigger:after {
+        content: '';
+        width: 50%;
+        height: 2px;
+        background: #fff;
+        border-radius: 10px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    .menu .smartphone-menu-trigger:after {
+        top: 55%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    .menu #ulperfil li {
+        padding: 1em 1em 1em 3em;
+        font-size: 1.2em;
+    }
+    .menu:focus {
+        transform: translate3d(0, 0, 0);
+        box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6);
+    }
+}
+
+
+/*========================== PROFILE CARD =======================*/
+
+.profile_d {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    height: 320px;
+    width: 750px;
+    background: #466170;
+    position: absolute;
+    top: 190px;
+    left: 20%;
+    margin-left: 148px;
+    border: #e8491d 3px solid;
+}
+
+.profile_d:hover {
+    box-shadow: 0 15px 39px 0 rgba(0, 0, 0, 0.2);
+}
+
+#img_prof {
+    border-radius: 0 0 5px 5px;
+    border-right: #e8491d 3px solid;
+}
+
+.prof_cont {
+    position: relative;
+    width: 56%;
+    height: 240px;
+    float: right;
+}
+
+.prof_cont h3,
+.prof_cont p {
+    color: white;
+}
+
+#change_img {
+    position: absolute;
+    top: 100%;
+    left: 15%;
+}
