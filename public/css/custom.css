@@ -3,8 +3,15 @@
 Sacar e install o Ruby, se n├úo tiverem: https://rubyinstaller.org/
 Instalar o sass, se n├úo tiverem: gem install sass
 F:\MEI\ACR_Project\Gym_project> sass --watch resources\assets\sass\costum.scss:public\css\costum.css */
+
+
+
+
+
+
+
+
 /* div do menu */
-/*VARIAVEIS*/
 /*divisorias / categorias do website*/
 #home,
 #serv,
@@ -183,10 +190,10 @@ input[type=password] {
     text-decoration: none;
     border: none;
     outline: none;
-    background-color: $laranja;
+    background-color: #e8491d;
 }
 #create_account:hover {
-    background-color: $cinza;;
+    background-color: #35424a;;
 }
 #forgot {
     font-size: 14px;
@@ -199,10 +206,10 @@ input[type=password] {
     text-decoration: none;
     border: none;
     outline: none;
-    background-color: $cinza;
+    background-color: #35424a;
 }
 #forgot:hover {
-    background-color: $laranja;;
+    background-color: #e8491d;;
 } */
 /*ATUALMENTE FORA DE USO*/
 .loginbox {
@@ -450,7 +457,7 @@ main .helper span {
   cursor: pointer; }
 
 /*.menu #ulperfil li:hover{
-    background-color: $laranja;
+    background-color: #e8491d;
   } */
 .menu #ulperfil li.icon-dashboard {
   background-image: url("http://www.entypo.com/images//gauge.svg"); }
