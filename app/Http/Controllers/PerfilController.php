@@ -33,4 +33,10 @@ class PerfilController extends Controller
         }
         return view('perfil',compact('user', 'pessoa'));
     }
+
+    public function show_edit(){
+        return view('edit_perfil');
+    }
+
+
 }

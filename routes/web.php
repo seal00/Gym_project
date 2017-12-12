@@ -16,6 +16,8 @@ Auth::routes();
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/home/{username}', 'PerfilController@index');
+Route::get('/home/{username}/edit', 'PerfilController@show_edit');
+Route::post('/home/{username}/edit', 'PerfilController@edit');
 Route::post('/home/{username}', 'PerfilController@update_avatar');
 
 //Route::get('verifyEmailFirst', 'Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
