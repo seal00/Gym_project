@@ -20,6 +20,10 @@
       <p><label>Sexo</label> {{$pessoa->sexo}}</p>
       <p><label>Peso</label> {{$pessoa->peso}}</p>
       <p><label>Altura</label> {{$pessoa->altura}}</p>
+
+      @if (!empty($morada))
+        <p><label>Morada</label> {{$morada->rua}}</p>
+      @endif
       <form id="change_img" enctype="multipart/form-data" action="/home/{{Auth::user()->username}}" method="post">
         <label id="upload_i" for="form-file">Alterar a imagem de perfil</label>
         <input type="file" name="avatar" id="form-file" class="hidden" />

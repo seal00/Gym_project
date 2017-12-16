@@ -13,7 +13,7 @@ class CreateTableMorada extends Migration
      */
     public function up()
     {
-        Schema::create('morada', function (Blueprint $table) {
+        Schema::create('moradas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('rua');
             $table->string('cod');
@@ -28,6 +28,6 @@ class CreateTableMorada extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('morada');
+        Schema::dropIfExists('moradas');
     }
 }

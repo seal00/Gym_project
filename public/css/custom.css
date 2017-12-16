@@ -204,7 +204,7 @@ input[type=password] {
 #forgot:hover {
     background-color: $laranja;;
 } */
-/*ATUALMENTE FORA DE USO*/
+
 .loginbox {
   top: 95px;
   color: #35424a;
@@ -223,6 +223,9 @@ input[type=password] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border: #e8491d 3px solid; }
+
+  .loginbox:hover {
+    box-shadow: 0 15px 39px 0 rgba(0, 0, 0, 0.2); }
 
 /*==========================BOXES  DE AVISO====================*/
 .messages {
