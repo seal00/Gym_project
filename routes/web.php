@@ -18,6 +18,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/home/{username}', 'PerfilController@index');
 Route::get('/home/{username}/edit', 'PerfilController@show_edit');
 Route::get('/home/{username}/addMorada', 'MoradaController@index');
+Route::post('/home/{username}/addMorada', 'MoradaController@add');
 Route::post('/home/{username}/edit', 'PerfilController@edit');
 Route::post('/home/{username}', 'PerfilController@update_avatar');
 

@@ -3,7 +3,7 @@
 @section('content2')
 
 <div class="loginbox">
-        <form role="form" method="POST" action="{{ url('/home/Auth::user()->username/edit') }}">
+        <form role="form" method="POST" action="/home/{{Auth::user()->username}}/edit">
 
             {{ csrf_field() }}
 
@@ -54,8 +54,8 @@
             <label>
                 <b>Sexo</b><br>
             </label>
-            <p><input type="radio" name="sexo" id="sexo" type="sexo" class="form-control" value="{{ old('Masculino') }}" checked> Masculino <br></p>
-            <p><input type="radio" name="sexo" id="sexo" type="sexo" class="form-control" value="{{ old('Feminino') }}"> Feminino <br></p>
+            <p><input type="radio" name="sexo" id="sexo" type="sexo" class="form-control" value="Feminino"> Feminino <br></p>
+            <p><input type="radio" name="sexo" id="sexo" type="sexo" class="form-control" value="Masculino"checked> Masculino <br></p>
             @if ($errors->has('sexo'))
             <span>
                 <strong>{{ $errors->first('sexo') }}</strong>
