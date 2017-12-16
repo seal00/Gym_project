@@ -1,6 +1,38 @@
 @extends('layouts.appperfil')
 
 @section('content2')
+
+
+@if(session('dados'))
+                    <div class="success">
+                        <strong>{{ session('dados') }}</strong>
+                    </div>
+                @endif
+                @if(session('morada'))
+                    <div class="success">
+                        <strong>{{ session('morada') }}</strong>
+                    </div>
+                @endif
+                @if(session('email'))
+                    <div class="success">
+                        <strong>{{ session('email') }}</strong>
+                    </div>
+                @endif
+                @if(session('email_error'))
+                    <div class="error">
+                        <strong>{{ session('email_error') }}</strong>
+                    </div>
+                @endif
+                @if(session('pass'))
+                    <div class="success">
+                        <strong>{{ session('pass') }}</strong>
+                    </div>
+                @endif
+                @if(session('pass_error'))
+                    <div class="error">
+                        <strong>{{ session('pass_error') }}</strong>
+                    </div>
+                @endif
 <div class="profile_d">
 <img id="img_prof" src="/uploads/avatars/{{Auth::user()->avatar}}" alt="Avatar" style="height:100%">
   <div class="prof_cont">
@@ -13,6 +45,8 @@
         <b>(Cliente)</b>
       @endif
       </h3>
+      <h5>---- {{$user->email}} ----</h5>
+
       <br><hr><br>
       <p><label>Contacto</label> {{$pessoa->contacto}}</p>
       <p><label>Data de Nascimento</label> {{$pessoa->nascimento}}</p>

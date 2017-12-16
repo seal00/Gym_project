@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Input;
+use Session;
+use Hash;
 use App\Pessoa;
 use App\Morada;
 use Image;
@@ -49,6 +52,46 @@ class PerfilController extends Controller
         return view('edit_perfil');
     }
 
+    public function email(){
+        return view('email');
+    }
+
+    public function pass(){
+        return view('password');
+    }
+
+    public function edit_pass(Request $request){
+        $user = Auth::user();
+        if ($user && Hash::check($request->password, $user->password)) {
+
+            $password = $request->new_password;
+            //dd($request->new_password);
+            $hashedPassword = Hash::make($password);
+            $user->password = $hashedPassword;
+            $user->save();
+            //dd(Hash::check($request->password, $user->password));
+            
+            Session::flash('pass', 'Password alterada com sucesso!');
+            return redirect("/home/$user->username");
+        }else{
+            Session::flash('pass_error', 'Erro ao alterar a password!');
+    		return redirect("/home/$user->username");
+    	}
+    }
+
+    public function edit_email(Request $request){
+        $user = Auth::user();
+        if($user){
+            $user->email = $request->email;
+            $user->save();
+            Session::flash('email', 'Email alterado com sucesso!');
+            return redirect("/home/$user->username");
+        }else{
+            Session::flash('email_error', 'Email alterado com sucesso!');
+    		return redirect("/home");
+    	}
+    }
+
     public function edit(Request $request){
         $user = Auth::user();
         $pessoa = Pessoa::where(['user_id'=>$user->id])->first();
@@ -62,6 +105,7 @@ class PerfilController extends Controller
             $pessoa->peso = $request->peso;
             $pessoa->altura = $request->altura;
             $pessoa->save();
+            Session::flash('dados', 'Dados inseridos com sucesso!');
             return redirect("/home/$user->username");
         }else{
     		return redirect("/home");
