@@ -18,6 +18,7 @@ class CreateTableMorada extends Migration
             $table->string('rua');
             $table->string('cod');
             $table->string('localidade');
+            $table->timestamps();
         });
     }
 

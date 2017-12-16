@@ -49,4 +49,23 @@ class PerfilController extends Controller
         return view('edit_perfil');
     }
 
+    public function edit(Request $request){
+        $user = Auth::user();
+        $pessoa = Pessoa::where(['user_id'=>$user->id])->first();
+        //dd($pessoa);
+        if($pessoa){
+            $pessoa->name = $request->name;
+            $pessoa->contacto = $request->contacto;
+            $pessoa->nascimento = $request->nascimento;
+            $pessoa->nif = $request->nif;
+            $pessoa->sexo = $request->sexo;
+            $pessoa->peso = $request->peso;
+            $pessoa->altura = $request->altura;
+            $pessoa->save();
+            return redirect("/home/$user->username");
+        }else{
+    		return redirect("/home");
+    	}
+    }
+
 }

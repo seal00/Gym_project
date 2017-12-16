@@ -16,15 +16,15 @@
     $pessoa = Pessoa::where(['user_id'=>Auth::user()->id])->first();
     $morada = Morada::where(['id'=>($pessoa->morada_id)])->first();
     if (!empty ($pessoa->morada_id)) {
-      echo "<li tabindex='0' class='icon-dashboard'><span><a id='ref' href='/home/{{Auth::user()->username}}/addMorada'>Alterar Morada</a></span></li>";
+      echo "<li tabindex='0' class='icon-dashboard'><span><a id='ref' href='/home/".Auth::user()->username."/addMorada'>Alterar Morada</a></span></li>";
     }else{
-      echo "<li tabindex='0' class='icon-dashboard'><span><a id='ref' href='/home/{{Auth::user()->username}}/addMorada'>Adicionar Morada</a></span></li>";
+      echo "<li tabindex='0' class='icon-dashboard'><span><a id='ref' href='/home/".Auth::user()->username."/addMorada'>Adicionar Morada</a></span></li>";
     }
     
     if (!empty ($pessoa->contacto)) {
-      echo "<li tabindex='0' class='icon-customers'><span><a id='ref' href='/home/{{Auth::user()->username}}/edit'>Alterar dados Pessoais</a></span></li>";
+      echo "<li tabindex='0' class='icon-customers'><span><a id='ref' href='/home/".Auth::user()->username."/edit'>Alterar dados Pessoais</a></span></li>";
     }else{
-      echo "<li tabindex='0' class='icon-customers'><span><a id='ref' href='/home/{{Auth::user()->username}}/edit'>Adicionar dados Pessoais</a></span></li>";
+      echo "<li tabindex='0' class='icon-customers'><span><a id='ref' href='/home/".Auth::user()->username."/edit'>Adicionar dados Pessoais</a></span></li>";
       }?>
 
     <!-- <li tabindex="0" class="icon-dashboard"><span><a id="ref" href="/home/{{Auth::user()->username}}/addMorada">Adicionar Morada</a></span></li> -->
