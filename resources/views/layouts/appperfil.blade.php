@@ -29,8 +29,8 @@
 
     <!-- <li tabindex="0" class="icon-dashboard"><span><a id="ref" href="/home/{{Auth::user()->username}}/addMorada">Adicionar Morada</a></span></li> -->
     <!-- <li tabindex="0" class="icon-customers"><span><a id="ref" href="/home/{{Auth::user()->username}}/edit">Alterar dados Pessoais</a></span></li> -->
-    <li tabindex="0" class="icon-users"><span><a href="#">Ver amigos</a></span></li>
-    <li tabindex="0" class="icon-settings"><span><a href="#">Ver amigos</a></span></li>
+    <li tabindex="0" class="icon-users"><span><a href="/home/{{Auth::user()->username}}/altEmail">Alterar email</a></span></li>
+    <li tabindex="0" class="icon-settings"><span><a href="/home/{{Auth::user()->username}}/altPassword">Alterar Password</a></span></li>
   </ul>
 </nav>
 
