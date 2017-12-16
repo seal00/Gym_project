@@ -20,7 +20,7 @@ Route::get('/home/{username}/edit', 'PerfilController@show_edit');
 Route::get('/home/{username}/addMorada', 'MoradaController@index');
 Route::post('/home/{username}/edit', 'PerfilController@edit');
 Route::post('/home/{username}', 'PerfilController@update_avatar');
-
+Route::get('/services', 'ServicesController@services');
 //Route::get('verifyEmailFirst', 'Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
 Route::get('verify/{email}/{verifyToken}', 'Auth\RegisterController@sendEmailDone')->name('sendEmailDone');
 //Route::get('/about', 'PagesController@about');

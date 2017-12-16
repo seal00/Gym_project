@@ -29,7 +29,8 @@
 		@if (Auth::guest())
         <nav class="navclass">
           <ul class="ulteste">
-            <li id="login">
+		  	<li id="login">
+            <!-- <li id="login"> -->
 				<!--<a href="{{ url('/login') }}">Login</a>-->
 				<a id="login-trigger" href="#" onClick="return false;">Login</a>
 			
@@ -86,6 +87,7 @@
 			<li class="liteste"><a href="/dadosPessoais">Dados Pessoais</a></li>
 			<li class="liteste"><a href="/pagamentos">Pagamentos</a></li>
 			<li class="liteste"><a href="/pt">Contate o PT</a></li>
+			<li class="liteste"><a href="/services">Serviços</a></li>
 			<li class="liteste"><a href="/home">Home</a></li>
 		  </ul>
 		  @endif
