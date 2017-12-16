@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\User;
 use App\Pessoa;
+use App\Morada;
 use Image;
 
 class PerfilController extends Controller
@@ -13,10 +14,20 @@ class PerfilController extends Controller
     public function index($username){
         $user  = Auth::user($username);
         $teste = $user->id;
-        $pessoa = Pessoa::where(['user_id'=>$user->id])->first();
         
-        //return [$user, $pessoa];
-        return view('perfil',compact('user', 'pessoa'));
+        //dd($teste);
+        $pessoa = Pessoa::where(['user_id'=>$user->id])->first();
+        //dd($pessoa->morada_id);
+        //$posts = Morada::all();
+        //dd($posts);
+        if(($pessoa->morada_id) != NULL){
+        $morada = Morada::where(['id'=>($pessoa->morada_id)])->first();
+        return view('perfil',compact('user', 'pessoa', 'morada'));
+    }else
+    return view('perfil',compact('user', 'pessoa'));
+        //dd($morada);
+        //return [$user, $pessoa, $morada];
+        
     }
 
     public function update_avatar(Request $request){
@@ -37,6 +48,5 @@ class PerfilController extends Controller
     public function show_edit(){
         return view('edit_perfil');
     }
-
 
 }
