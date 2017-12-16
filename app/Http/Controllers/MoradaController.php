@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use App\Pessoa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
 use App\Morada;
 
 class MoradaController extends Controller
 {
     public function index(){
-        return view('morada');
+        $user = Auth::user();
+        $pessoa = Pessoa::where(['user_id'=>$user->id])->first();
+
+        return view('morada',compact('user', 'pessoa'));
     }
 
     public function add(Request $request){
@@ -27,7 +31,9 @@ class MoradaController extends Controller
             //The associate method is used to belongs relationship
             $pessoa->morada()->associate($morada)->save();
             //User::find(1)->account()->associate($account)->save();
-    		return redirect("/home/$user->username/addMorada");
+            Session::flash('morada', 'Morada inserida com sucesso!');
+
+    		return redirect("/home/$user->username");
     	}else{
     		return redirect("/home");
     	}

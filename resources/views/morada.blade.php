@@ -40,7 +40,11 @@
             </span>
             @endif
 
-            <button type="submit" id="lbutton">Alterar Dados</button>
+            @if (empty($pessoa->morada_id))
+                <button type="submit" id="lbutton">Adicionar Morada</button>
+            @else
+                <button type="submit" id="lbutton">Alterar Morada</button>
+            @endif
 
         </form>
         </div>
