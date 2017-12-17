@@ -1,7 +1,3 @@
-@extends('layouts.appperfil')
-
-@section('content2')
-
 <div class="loginbox">
         <form role="form" method="POST" action="/home/{{Auth::user()->username}}/altEmail">
 
@@ -22,5 +18,3 @@
 
         </form>
 </div>
-
-@endsection
