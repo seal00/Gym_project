@@ -437,6 +437,9 @@ main .helper span {
   font-weight: normal;
   margin-bottom: 0; }
 
+.menu .avatar h2:hover {
+  color: #e8491d; }
+
 .menu #ulperfil {
   list-style: none;
   /*padding: 0.5em 0;*/

@@ -33,6 +33,22 @@ class PerfilController extends Controller
         
     }
 
+    public function perfil($username){
+        $user  = Auth::user($username);
+        $teste = $user->id;
+        
+        //dd($teste);
+        $pessoa = Pessoa::where(['user_id'=>$user->id])->first();
+        //dd($pessoa->morada_id);
+        //$posts = Morada::all();
+        //dd($posts);
+        if(($pessoa->morada_id) != NULL){
+        $morada = Morada::where(['id'=>($pessoa->morada_id)])->first();
+        return view('show_perfil',compact('user', 'pessoa', 'morada'));
+    }else
+    return view('show_perfil',compact('user', 'pessoa'));
+    }
+
     public function update_avatar(Request $request){
 
         if($request->hasFile('avatar')){
